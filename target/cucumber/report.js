@@ -49,7 +49,7 @@ formatter.examples({
     {
       "cells": [
         "dress",
-        "7",
+        "67",
         "Price: Lowest first"
       ]
     }
@@ -89,14 +89,15 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user verifies a message \"7\"",
+  "name": "user verifies a message \"67\"",
   "keyword": "Then "
 });
 formatter.match({
   "location": "ShoppingSearchSorting_steps.user_verifies_a_message(String)"
 });
 formatter.result({
-  "status": "passed"
+  "error_message": "org.junit.ComparisonFailure: Result message verification expected:\u003c[6]7 results have been ...\u003e but was:\u003c[]7 results have been ...\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:115)\r\n\tat steps.ShoppingSearchSorting_steps.user_verifies_a_message(ShoppingSearchSorting_steps.java:28)\r\n\tat ✽.user verifies a message \"67\"(src/test/resources/features/shoppingSearchSorting.feature:7)\r\n",
+  "status": "failed"
 });
 formatter.step({
   "name": "user selects sort by option \"Price: Lowest first\"",
@@ -106,7 +107,7 @@ formatter.match({
   "location": "ShoppingSearchSorting_steps.user_selects_sort_by_option(String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "user verifies each result is sorted by lowest price first",
@@ -116,8 +117,7 @@ formatter.match({
   "location": "ShoppingSearchSorting_steps.user_verifies_each_result_is_sorted_by_lowest_price_first()"
 });
 formatter.result({
-  "error_message": "java.lang.AssertionError: Ascending order in prices failed: first price: 16.51 second price: 16.4\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\tat steps.ShoppingSearchSorting_steps.user_verifies_each_result_is_sorted_by_lowest_price_first(ShoppingSearchSorting_steps.java:45)\n\tat ✽.user verifies each result is sorted by lowest price first(src/test/resources/features/shoppingSearchSorting.feature:9)\n",
-  "status": "failed"
+  "status": "skipped"
 });
 formatter.embedding("image/png", "embedded0.png");
 formatter.write("THIS SCENARIO FAILED");
